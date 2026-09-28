@@ -1,0 +1,39 @@
+# HyWAP PoC — Python dependencies (Python 3.9–3.11)
+# Install: pip install -r requirements.txt
+# Note: rasterio / geopandas depend on GDAL. Locally, conda-forge is easier
+#       (conda install -c conda-forge gdal rasterio geopandas). hylite (PRISMA
+#       HDF5->ENVI conversion) is listed separately as it is not required by this notebook.
+
+# --- geospatial raster & vector ---
+rasterio
+geopandas
+rasterstats
+shapely
+pyproj
+
+# --- hyperspectral / segmentation ---
+scikit-image
+h5py
+
+# --- scientific core ---
+numpy
+scipy
+pandas
+
+# --- Sentinel-2 access (time series, no gIQ) ---
+pystac-client
+planetary-computer
+odc-stac
+rioxarray
+
+# --- visualization & interactivity ---
+matplotlib
+folium
+ipywidgets
+
+# --- notebook ---
+jupyterlab
+ipykernel
+
+# --- PRISMA HDF5 -> ENVI conversion (upstream step, outside this notebook) ---
+# pip install git+https://github.com/samthiele/hylite.git
