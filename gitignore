@@ -1,0 +1,27 @@
+# Données (trop volumineuses — ne pas versionner)
+data/
+*.he5
+*.hdf
+*.h5
+*.tif
+*.tiff
+*.dat
+*.img
+*.hdr
+
+# Sorties générées
+outputs/
+*.gpkg
+*.geojson
+*.html
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Système
+.DS_Store
+Thumbs.db
