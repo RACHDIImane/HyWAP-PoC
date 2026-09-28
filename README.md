@@ -10,7 +10,7 @@ HyWAP maps crop water stress at the parcel level from hyperspectral satellite im
 
 1. **Data acquisition** — hyperspectral L2D product (surface reflectance) + panchromatic band.
 2. **Preprocessing** — conversion to a stacked reflectance cube (VNIR + SWIR); georeferencing read from the product metadata.
-3. **Pan-sharpening** — the multispectral bands are sharpened with the high-resolution panchromatic band to obtain a fine image for delineation.
+3. **Pan-sharpening** — the hyperspectral bands are sharpened with the high-resolution panchromatic band (5m) to obtain a fine image for delineation.
 4. **Field delineation** — automatic segmentation of the pan-sharpened image into agricultural parcels.
 5. **Spectral indices** — per-parcel vegetation and water indices (greenness, pigment/red-edge, and leaf-water indices such as NDWI, NDII, MSI).
 6. **Water-stress mapping** — a transparent decision rule grades each parcel from Healthy to Severe.
