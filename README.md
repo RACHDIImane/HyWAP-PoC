@@ -122,6 +122,7 @@ Open-source Python: `hylite`, `rasterio`, `geopandas`, `rasterstats`, `scikit-im
 |**Douae Benhlima**|Computer Science Engineer \& WebGIS Developer|
 |**Abdelouahed Kabouri**|Agricultural Engineer 
 |**Lina Ddeou**|Intern — MSc (hyperspectral)|
+
 \---
 
 ## 🔒 Data access \& licensing
