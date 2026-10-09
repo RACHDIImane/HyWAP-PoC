@@ -1,39 +1,50 @@
-# HyWAP PoC — Python dependencies (Python 3.9–3.11)
-# Install: pip install -r requirements.txt
-# Note: rasterio / geopandas depend on GDAL. Locally, conda-forge is easier
-#       (conda install -c conda-forge gdal rasterio geopandas). hylite (PRISMA
-#       HDF5->ENVI conversion) is listed separately as it is not required by this notebook.
+# HyWAP — Python dependencies (pip). 
+# For the most robust setup (GDAL/rasterio prebuilt), prefer the conda env: `conda env create -f hywap.yml`.
+# ⚠️ Authoritative pinned file: generate it from YOUR working env:
+#     conda activate hywap && pip list --format=freeze > requirements.txt
+# The list below is a clean, readable fallback (confirm the pins against your env).
+# torch CPU wheels are served from the PyTorch index:
+--extra-index-url https://download.pytorch.org/whl/cpu
 
-# --- geospatial raster & vector ---
-rasterio
-geopandas
-rasterstats
-shapely
-pyproj
+# --- geospatial core ---
+rasterio==1.5.1
+geopandas==1.1.4
+rasterstats==0.21.0
+shapely==2.1.2
+pyproj==3.8.0
+fiona==1.10.1
+pyogrio==0.13.0
+h5py==3.16.0
 
-# --- hyperspectral / segmentation ---
-scikit-image
-h5py
+# --- scientific stack ---
+numpy==2.1.3
+pandas==2.3.3
+scipy==1.14.1
+scikit-image==0.25.2
+scikit-learn==1.5.2
+matplotlib==3.9.2
 
-# --- scientific core ---
-numpy
-scipy
-pandas
+# --- raster / STAC (Sentinel-2 via Microsoft Planetary Computer) ---
+xarray==2024.9.0
+rioxarray==0.18.1
+odc-stac==0.3.10
+pystac-client==0.8.3
+planetary-computer==1.0.0
 
-# --- Sentinel-2 access (time series, no gIQ) ---
-pystac-client
-planetary-computer
-odc-stac
-rioxarray
+# --- maps / interactive ---
+folium==0.17.0
+branca==0.7.2
+mapclassify==2.8.1
+ipywidgets==8.1.5
+ipyleaflet==0.19.2
+jupyterlab==4.2.5
 
-# --- visualization & interactivity ---
-matplotlib
-folium
-ipywidgets
+# --- deep-learning delineation ---
+torch==2.14.1
+torchvision        # let pip pick the version matching torch
+ultralytics==8.4.154
+agribound==0.1.3.post1
 
-# --- notebook ---
-jupyterlab
-ipykernel
-
-# --- PRISMA HDF5 -> ENVI conversion (upstream step, outside this notebook) ---
-# pip install git+https://github.com/samthiele/hylite.git
+# --- hyperspectral ---
+hylite==1.41
+spectral==0.25
