@@ -8,7 +8,7 @@ Fields are delineated automatically, per-parcel spectral indices are computed, a
 
 > ℹ️ \*\*Framing:\*\* this is a \*\*description of state, not a forecast\*\*. Severity is \*\*relative to the scene\*\*.
 
-\---
+\
 
 ## 🌐 Live application
 
@@ -18,13 +18,13 @@ An interactive web app lets you explore the results — click a parcel to read i
 
 > ⏳ The app is served over a tunnel and is \*\*live during the evaluation window\*\*. If the link is down, contact us and we'll restart it: `rachdi@crts.gov.ma`.
 
-\---
+\
 
 ## 💧 Why it matters — water stress in Morocco
 
 Morocco is among the world's most water-stressed countries: per-capita water fell to **\~645 m³/yr (2015)**, projected **\~500 m³/yr by 2050** — below the **1,000 m³** stress threshold. By 2024: **6 consecutive drought years**, rainfall **−70%** (Sep 2023→Feb 2024), average **dam levels \~25%**. Agriculture uses **\~85%** of the country's water — so better-targeted irrigation is a national priority. Our pilot, the **Gharb plain (Sebou basin)**, is a major irrigated region where per-parcel stress mapping matters most.
 
-\---
+\
 
 ## 🧭 What the pipeline does
 
@@ -44,7 +44,7 @@ Converts the raw **PRISMA L2D** product (already **surface reflectance**) to an 
 |📈 **Season time series**|Sentinel-2 full cycle (Nov → Jun) with a red-edge early-stress signal|
 |🗺️ **Interactive outputs**|per-parcel deep-dive viewer + clickable severity map (HTML)|
 
-\---
+\
 
 ## 📡 Data
 
@@ -56,7 +56,7 @@ Converts the raw **PRISMA L2D** product (already **surface reflectance**) to an 
 
 **813** is the mission the challenge is built around. HyWAP is **sensor-agnostic** and runs today on **PRISMA** — and on any hyperspectral source — so the product is not tied to a single satellite.
 
-\---
+\
 
 ## 📂 Repository structure
 
@@ -75,7 +75,7 @@ HyWAP/
 └── docs/slides.pdf               # presentation
 ```
 
-\---
+\
 
 ## ⚙️ How to run
 
@@ -94,25 +94,25 @@ Then: **preprocessing** (only if you have the raw scene) → **analysis** (`HyWA
 
 > 🤖 \*\*AgriBound note.\*\* The first run loads a deep-learning model (Delineate-Anything / YOLO) on PyTorch. If a cell turns red, \*\*restart the kernel and re-run\*\* — if the kernel dies, restart, run from the top and \*\*skip AgriBound\*\*, loading its saved `fields\_prisma.gpkg`. A red cell here is normal; the saved GeoPackage is what matters. On CPU, inference runs tile-by-tile, so give it a minute.
 
-\---
+\
 
 ## 🧩 Delineation
 
 AgriBound runs on PRISMA's **pan-sharpened 5 m** image and is intersected with a Felzenszwalb segmentation (clean field geometry + internal detail), then simplified. **The finer the spatial resolution, the more accurate the boundaries** — a sharper source (Planet, or the client's own very-high-resolution imagery) feeds the same engine. Delineation is a **replaceable front-end**: the per-parcel stress engine is the product.
 
-\---
+\
 
 ## 📤 Outputs
 
 Per-parcel **severity GeoPackage**, **delineation** + **study-area boundary** GeoPackages, an **index + hyperspectral stack** (GeoTIFF), a per-parcel **table** (CSV), and a standalone **interactive map** (HTML).
 
-\---
+\
 
 ## 🛠️ Tools
 
 Open-source Python: `hylite`, `rasterio`, `geopandas`, `rasterstats`, `scikit-image`, `numpy`, `pandas`, `matplotlib`, `folium`, `agribound` (+ `ultralytics`, `torch` CPU). Sentinel-2 via **Microsoft Planetary Computer**.
 
-\---
+\
 
 ## 👥 Team — CRTS, Royal Center for Remote Sensing (Rabat, Morocco)
 
@@ -123,7 +123,7 @@ Open-source Python: `hylite`, `rasterio`, `geopandas`, `rasterstats`, `scikit-im
 |**Abdelouahed Kabouri**|Agricultural Engineer 
 |**Lina Ddeou**|Intern — MSc (hyperspectral)|
 
-\---
+\
 
 ## 🔒 Data access \& licensing
 
@@ -132,7 +132,7 @@ In line with the **PRISMA (ASI) data policy**, the raw scene is **not redistribu
 * **Full scene:** download the PRISMA L2D product from [prisma.asi.it](https://prisma.asi.it) (free registration). Scene used: `PRS\_L2D\_STD\_20210324...` — Gharb plain, 2021-03-24.
 * **Quick run:** use the provided **test clips** (`Prisma\_LGHARB\_test` + `.hdr`, `PRISMA\_Pan\_test.tif`, `study\_area\_boundary.gpkg`) and run `HyWAP\_PoC.ipynb` directly — no HDF5, no hylite needed.
 
-\---
+\
 
 ## 📜 License
 
