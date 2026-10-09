@@ -118,13 +118,10 @@ Open-source Python: `hylite`, `rasterio`, `geopandas`, `rasterstats`, `scikit-im
 
 |Member|Role|
 |-|-|
-|**Imane Rachdi**|Surveying Engineer · Hyperspectral Specialist *(lead)* — acquisition, pre-processing, indices \& delineation|
-|**Douae Benhlima**|Computer Science Engineer \& WebGIS Developer — application \& automation|
-|**Abdelouahed Kabouri**|Agricultural Engineer — crop physiology \& water-stress interpretation|
-|**Lina Ddeou**|Intern — MSc (hyperspectral), supervised by I. Rachdi|
-
-**End users / partners:** ORMVA du Gharb · ABH Sebou (Sebou basin), plus insurers, agricultural credit and public drought programs.
-
+|**Imane Rachdi**|Surveying Engineer · Hyperspectral Specialist|
+|**Douae Benhlima**|Computer Science Engineer \& WebGIS Developer|
+|**Abdelouahed Kabouri**|Agricultural Engineer 
+|**Lina Ddeou**|Intern — MSc (hyperspectral)|
 \---
 
 ## 🔒 Data access \& licensing
