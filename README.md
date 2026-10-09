@@ -2,10 +2,6 @@
 
 > 🛰️ \*\*Arab Youth Space Hackathon 2026 · Challenge 813 · Team CRTS, Morocco\*\*
 
-!\[status](https://img.shields.io/badge/status-proof%20of%20concept-green)
-!\[python](https://img.shields.io/badge/python-3.11-blue)
-!\[license](https://img.shields.io/badge/license-MIT-lightgrey)
-
 **HyWAP turns a hyperspectral image into a per-parcel map of crop water stress — field by field, graded by severity.** 💧
 
 Fields are delineated automatically, per-parcel spectral indices are computed, and each parcel is assigned a **relative water-stress level**. The proof of concept runs on a **PRISMA** scene over the **Gharb plain** (an irrigated region of Morocco). The method is **sensor-agnostic**: it reads reflectance + wavelengths, not one satellite.
@@ -20,7 +16,7 @@ An interactive web app lets you explore the results — click a parcel to read i
 
 **▶️ App link:** 'https://recipe-reserved-missions-cure.trycloudflare.com/#'
 
-> ⏳ The app is served over a tunnel and is \*\*live during the evaluation window\*\*. If the link is down, contact us and we'll restart it: `rachdiimane100@gmail.com`.
+> ⏳ The app is served over a tunnel and is \*\*live during the evaluation window\*\*. If the link is down, contact us and we'll restart it: `rachdi@crts.gov.ma`.
 
 \---
 
