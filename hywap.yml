@@ -1,0 +1,56 @@
+name: hywap
+# Cross-platform environment for HyWAP (Windows / Linux / macOS).
+# Geospatial stack via conda-forge (avoids GDAL/rasterio build pain);
+# torch (CPU) + AgriBound/ultralytics via pip from the PyTorch CPU index.
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+
+  # --- geospatial core ---
+  - gdal
+  - h5py
+  - rasterio
+  - geopandas
+  - rasterstats
+  - shapely
+  - pyproj
+  - fiona
+  - pyogrio
+
+  # --- scientific stack ---
+  - numpy
+  - pandas
+  - scipy
+  - scikit-image
+  - scikit-learn
+  - matplotlib
+
+  # --- raster / STAC (Sentinel-2 via Microsoft Planetary Computer) ---
+  - xarray
+  - rioxarray
+  - odc-stac
+  - pystac-client
+  - planetary-computer
+
+  # --- maps / interactive ---
+  - folium
+  - branca
+  - mapclassify
+  - jupyterlab
+  - ipywidgets
+  - ipyleaflet
+
+  # --- pip-only packages ---
+  - pip:
+    # CPU build of PyTorch (no GPU needed); this index serves the +cpu wheels
+    - --extra-index-url https://download.pytorch.org/whl/cpu
+    - torch
+    - torchvision
+    # delineation
+    - ultralytics
+    - agribound
+    # hyperspectral
+    - hylite
+    - spectral
